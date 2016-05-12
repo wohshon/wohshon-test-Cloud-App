@@ -22,9 +22,9 @@ app.use(express.static(__dirname + '/public'));
 // Note: important that this is added just before your own Routes
 app.use(mbaasExpress.fhmiddleware());
 app.use(require('./lib/sec.js')); 
-app.use(require('./lib/product.js')); 
 //app.use('/hello', require('./lib/hello.js')());
 app.use('/hello', require('./lib/mbassHello.js')()); // yes a typo!
+app.use('/product', require('./lib/product.js'));
 
 // Important that this is last!
 app.use(mbaasExpress.errorHandler());
