@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(mbaasExpress.fhmiddleware());
 
 //app.use('/hello', require('./lib/hello.js')());
-app.use('/hello', require('./lib/mbaasHello.js')());
+app.use('/hello', require('./lib/mbassHello.js')()); // yes a typo!
 
 // Important that this is last!
 app.use(mbaasExpress.errorHandler());
